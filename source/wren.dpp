@@ -1,0 +1,2 @@
+// https://github.com/wren-lang/wren/blob/0.3.0/src/include/wren.h
+#include "wren.h"
