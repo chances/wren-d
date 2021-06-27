@@ -6,5 +6,6 @@
   ],
   "license": "MIT",
 	"copyright": "Copyright © 2020, Chance Snow",
-  "targetType": "sourceLibrary"
+  "targetType": "sourceLibrary",
+  "targetPath": "bin"
 }
