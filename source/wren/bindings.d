@@ -1,3 +1,5 @@
+// AUTOMATICALLY GENERATED: DO NOT EDIT
+module wren.bindings;
 
 
 
@@ -196,9 +198,9 @@ extern(C)
             _Anonymous_2 __wseq32;
         }
         _Anonymous_1 _anonymous_3;
-        auto __wseq() @property @nogc pure nothrow { return _anonymous_3.__wseq; }
+        ref auto __wseq() @property @nogc pure nothrow { return _anonymous_3.__wseq; }
         void __wseq(_T_)(auto ref _T_ val) @property @nogc pure nothrow { _anonymous_3.__wseq = val; }
-        auto __wseq32() @property @nogc pure nothrow { return _anonymous_3.__wseq32; }
+        ref auto __wseq32() @property @nogc pure nothrow { return _anonymous_3.__wseq32; }
         void __wseq32(_T_)(auto ref _T_ val) @property @nogc pure nothrow { _anonymous_3.__wseq32 = val; }
         static union _Anonymous_4
         {
@@ -211,9 +213,9 @@ extern(C)
             _Anonymous_5 __g1_start32;
         }
         _Anonymous_4 _anonymous_6;
-        auto __g1_start() @property @nogc pure nothrow { return _anonymous_6.__g1_start; }
+        ref auto __g1_start() @property @nogc pure nothrow { return _anonymous_6.__g1_start; }
         void __g1_start(_T_)(auto ref _T_ val) @property @nogc pure nothrow { _anonymous_6.__g1_start = val; }
-        auto __g1_start32() @property @nogc pure nothrow { return _anonymous_6.__g1_start32; }
+        ref auto __g1_start32() @property @nogc pure nothrow { return _anonymous_6.__g1_start32; }
         void __g1_start32(_T_)(auto ref _T_ val) @property @nogc pure nothrow { _anonymous_6.__g1_start32 = val; }
         uint[2] __g_refs;
         uint[2] __g_size;
@@ -238,6 +240,22 @@ extern(C)
         __pthread_internal_list* __next;
     }
     alias __pthread_list_t = __pthread_internal_list;
+    alias int64_t = c_long;
+    alias int32_t = int;
+    alias int16_t = short;
+    alias int8_t = byte;
+    alias size_t = c_ulong;
+    alias wchar_t = int;
+    union pthread_barrierattr_t
+    {
+        char[4] __size;
+        int __align;
+    }
+    union pthread_barrier_t
+    {
+        char[32] __size;
+        c_long __align;
+    }
     struct WrenVM;
     struct WrenHandle;
     alias WrenReallocateFn = void* function(void*, c_ulong);
@@ -338,24 +356,8 @@ extern(C)
     void wrenAbortFiber(WrenVM*, int) @nogc nothrow;
     void* wrenGetUserData(WrenVM*) @nogc nothrow;
     void wrenSetUserData(WrenVM*, void*) @nogc nothrow;
-    alias int64_t = c_long;
-    alias int32_t = int;
-    pragma(mangle, "alloca") void* alloca_(c_ulong) @nogc nothrow;
-    alias int16_t = short;
-    alias int8_t = byte;
-    union pthread_barrierattr_t
-    {
-        char[4] __size;
-        int __align;
-    }
-    union pthread_barrier_t
-    {
-        char[32] __size;
-        c_long __align;
-    }
     alias pthread_spinlock_t = int;
-    alias size_t = c_ulong;
-    alias wchar_t = int;
+    pragma(mangle, "alloca") void* alloca_(c_ulong) @nogc nothrow;
     union pthread_rwlockattr_t
     {
         char[8] __size;
@@ -1321,6 +1323,70 @@ extern(C)
 
 
 
+
+
+    static if(!is(typeof(_ALLOCA_H))) {
+        private enum enumMixinStr__ALLOCA_H = `enum _ALLOCA_H = 1;`;
+        static if(is(typeof({ mixin(enumMixinStr__ALLOCA_H); }))) {
+            mixin(enumMixinStr__ALLOCA_H);
+        }
+    }
+
+
+
+
+    static if(!is(typeof(WREN_VERSION_NUMBER))) {
+        private enum enumMixinStr_WREN_VERSION_NUMBER = `enum WREN_VERSION_NUMBER = ( WREN_VERSION_MAJOR * 1000000 + WREN_VERSION_MINOR * 1000 + WREN_VERSION_PATCH );`;
+        static if(is(typeof({ mixin(enumMixinStr_WREN_VERSION_NUMBER); }))) {
+            mixin(enumMixinStr_WREN_VERSION_NUMBER);
+        }
+    }
+
+
+
+
+    static if(!is(typeof(WREN_VERSION_STRING))) {
+        private enum enumMixinStr_WREN_VERSION_STRING = `enum WREN_VERSION_STRING = "0.3.0";`;
+        static if(is(typeof({ mixin(enumMixinStr_WREN_VERSION_STRING); }))) {
+            mixin(enumMixinStr_WREN_VERSION_STRING);
+        }
+    }
+
+
+
+
+    static if(!is(typeof(WREN_VERSION_PATCH))) {
+        private enum enumMixinStr_WREN_VERSION_PATCH = `enum WREN_VERSION_PATCH = 0;`;
+        static if(is(typeof({ mixin(enumMixinStr_WREN_VERSION_PATCH); }))) {
+            mixin(enumMixinStr_WREN_VERSION_PATCH);
+        }
+    }
+
+
+
+
+    static if(!is(typeof(WREN_VERSION_MINOR))) {
+        private enum enumMixinStr_WREN_VERSION_MINOR = `enum WREN_VERSION_MINOR = 3;`;
+        static if(is(typeof({ mixin(enumMixinStr_WREN_VERSION_MINOR); }))) {
+            mixin(enumMixinStr_WREN_VERSION_MINOR);
+        }
+    }
+
+
+
+
+    static if(!is(typeof(WREN_VERSION_MAJOR))) {
+        private enum enumMixinStr_WREN_VERSION_MAJOR = `enum WREN_VERSION_MAJOR = 0;`;
+        static if(is(typeof({ mixin(enumMixinStr_WREN_VERSION_MAJOR); }))) {
+            mixin(enumMixinStr_WREN_VERSION_MAJOR);
+        }
+    }
+
+
+
+
+
+
     static if(!is(typeof(NULL))) {
         private enum enumMixinStr_NULL = `enum NULL = ( cast( void * ) 0 );`;
         static if(is(typeof({ mixin(enumMixinStr_NULL); }))) {
@@ -1341,6 +1407,22 @@ extern(C)
         private enum enumMixinStr_false_ = `enum false_ = 0;`;
         static if(is(typeof({ mixin(enumMixinStr_false_); }))) {
             mixin(enumMixinStr_false_);
+        }
+    }
+
+
+
+
+    static if(!is(typeof(__FD_ZERO_STOS))) {
+        private enum enumMixinStr___FD_ZERO_STOS = `enum __FD_ZERO_STOS = "stosq";`;
+        static if(is(typeof({ mixin(enumMixinStr___FD_ZERO_STOS); }))) {
+            mixin(enumMixinStr___FD_ZERO_STOS);
+        }
+    }
+    static if(!is(typeof(_BITS_STDINT_INTN_H))) {
+        private enum enumMixinStr__BITS_STDINT_INTN_H = `enum _BITS_STDINT_INTN_H = 1;`;
+        static if(is(typeof({ mixin(enumMixinStr__BITS_STDINT_INTN_H); }))) {
+            mixin(enumMixinStr__BITS_STDINT_INTN_H);
         }
     }
 
@@ -1375,38 +1457,6 @@ extern(C)
             mixin(enumMixinStr___GNUC_VA_LIST);
         }
     }
-    static if(!is(typeof(__FD_ZERO_STOS))) {
-        private enum enumMixinStr___FD_ZERO_STOS = `enum __FD_ZERO_STOS = "stosq";`;
-        static if(is(typeof({ mixin(enumMixinStr___FD_ZERO_STOS); }))) {
-            mixin(enumMixinStr___FD_ZERO_STOS);
-        }
-    }
-    static if(!is(typeof(_BITS_STDINT_INTN_H))) {
-        private enum enumMixinStr__BITS_STDINT_INTN_H = `enum _BITS_STDINT_INTN_H = 1;`;
-        static if(is(typeof({ mixin(enumMixinStr__BITS_STDINT_INTN_H); }))) {
-            mixin(enumMixinStr__BITS_STDINT_INTN_H);
-        }
-    }
-    static if(!is(typeof(_ALLOCA_H))) {
-        private enum enumMixinStr__ALLOCA_H = `enum _ALLOCA_H = 1;`;
-        static if(is(typeof({ mixin(enumMixinStr__ALLOCA_H); }))) {
-            mixin(enumMixinStr__ALLOCA_H);
-        }
-    }
-
-
-
-
-    static if(!is(typeof(WREN_VERSION_NUMBER))) {
-        private enum enumMixinStr_WREN_VERSION_NUMBER = `enum WREN_VERSION_NUMBER = ( WREN_VERSION_MAJOR * 1000000 + WREN_VERSION_MINOR * 1000 + WREN_VERSION_PATCH );`;
-        static if(is(typeof({ mixin(enumMixinStr_WREN_VERSION_NUMBER); }))) {
-            mixin(enumMixinStr_WREN_VERSION_NUMBER);
-        }
-    }
-
-
-
-
     static if(!is(typeof(_BITS_SYSMACROS_H))) {
         private enum enumMixinStr__BITS_SYSMACROS_H = `enum _BITS_SYSMACROS_H = 1;`;
         static if(is(typeof({ mixin(enumMixinStr__BITS_SYSMACROS_H); }))) {
@@ -1415,14 +1465,6 @@ extern(C)
     }
 
 
-
-
-    static if(!is(typeof(WREN_VERSION_STRING))) {
-        private enum enumMixinStr_WREN_VERSION_STRING = `enum WREN_VERSION_STRING = "0.3.0";`;
-        static if(is(typeof({ mixin(enumMixinStr_WREN_VERSION_STRING); }))) {
-            mixin(enumMixinStr_WREN_VERSION_STRING);
-        }
-    }
 
 
 
@@ -1493,42 +1535,6 @@ extern(C)
             mixin(enumMixinStr__THREAD_SHARED_TYPES_H);
         }
     }
-
-
-
-
-    static if(!is(typeof(WREN_VERSION_PATCH))) {
-        private enum enumMixinStr_WREN_VERSION_PATCH = `enum WREN_VERSION_PATCH = 0;`;
-        static if(is(typeof({ mixin(enumMixinStr_WREN_VERSION_PATCH); }))) {
-            mixin(enumMixinStr_WREN_VERSION_PATCH);
-        }
-    }
-
-
-
-
-    static if(!is(typeof(WREN_VERSION_MINOR))) {
-        private enum enumMixinStr_WREN_VERSION_MINOR = `enum WREN_VERSION_MINOR = 3;`;
-        static if(is(typeof({ mixin(enumMixinStr_WREN_VERSION_MINOR); }))) {
-            mixin(enumMixinStr_WREN_VERSION_MINOR);
-        }
-    }
-
-
-
-
-    static if(!is(typeof(WREN_VERSION_MAJOR))) {
-        private enum enumMixinStr_WREN_VERSION_MAJOR = `enum WREN_VERSION_MAJOR = 0;`;
-        static if(is(typeof({ mixin(enumMixinStr_WREN_VERSION_MAJOR); }))) {
-            mixin(enumMixinStr_WREN_VERSION_MAJOR);
-        }
-    }
-
-
-
-
-
-
     static if(!is(typeof(__PTHREAD_SPINS_DATA))) {
         private enum enumMixinStr___PTHREAD_SPINS_DATA = `enum __PTHREAD_SPINS_DATA = short __spins ; short __elision;`;
         static if(is(typeof({ mixin(enumMixinStr___PTHREAD_SPINS_DATA); }))) {
@@ -1761,10 +1767,10 @@ extern(C)
 
 
 
-    static if(!is(typeof(__timespec_defined))) {
-        private enum enumMixinStr___timespec_defined = `enum __timespec_defined = 1;`;
-        static if(is(typeof({ mixin(enumMixinStr___timespec_defined); }))) {
-            mixin(enumMixinStr___timespec_defined);
+    static if(!is(typeof(_STRUCT_TIMESPEC))) {
+        private enum enumMixinStr__STRUCT_TIMESPEC = `enum _STRUCT_TIMESPEC = 1;`;
+        static if(is(typeof({ mixin(enumMixinStr__STRUCT_TIMESPEC); }))) {
+            mixin(enumMixinStr__STRUCT_TIMESPEC);
         }
     }
 
