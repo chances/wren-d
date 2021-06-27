@@ -1,0 +1,23 @@
+name: wren-d CI
+
+on: push
+
+jobs:
+  test:
+    name: Tests
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install D compiler
+      uses: dlang-community/setup-dlang@v1
+      with:
+        compiler: ldc-latest
+    - name: Lint
+      run: dub lint
+    - name: Test
+      run: dub test --parallel --coverage
+    - name: Upload Coverage to Codecov
+      if: success()
+      run: bash <(curl -s https://codecov.io/bash)
