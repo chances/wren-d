@@ -15,7 +15,7 @@ jobs:
       with:
         compiler: ldc-latest
     - name: Lint
-      run: dub lint
+      run: dub run dscanner -- --styleCheck source
     - name: Test
       run: dub test --parallel --coverage
     - name: Upload Coverage to Codecov
