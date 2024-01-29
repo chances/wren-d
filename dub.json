@@ -6,5 +6,13 @@
   ],
   "license": "MIT",
 	"copyright": "Copyright © 2020, Chance Snow",
-  "targetType": "sourceLibrary"
+  "targetType": "sourceLibrary",
+  "targetPath": "bin",
+  "toolchainRequirements": {
+    "frontend": ">=2.105"
+  },
+  "preGenerateCommands-posix": ["make"],
+  "lflags-posix": ["-L$WREN_D_PACKAGE_DIR/wren/lib"],
+  "lflags-windows": ["/LIBPATH:$WREN_D_PACKAGE_DIR/wren/lib"],
+  "libs": ["wren"]
 }
