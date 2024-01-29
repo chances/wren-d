@@ -9,7 +9,7 @@ D bindings to the [Wren](http://wren.io/) scripting language.
 
 ```json
 "dependencies": {
-    "wren-d": "0.4.1"
+    "wren-d": "0.4.2"
 }
 ```
 

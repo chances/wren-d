@@ -1,6 +1,6 @@
 module wren;
 
-public import bindings;
+public import wren_bindings;
 
 version (unittest):
 
