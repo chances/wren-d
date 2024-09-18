@@ -1,0 +1,7 @@
+{
+  "dvelop.fmt.braceStyle" : "knr",
+  "editor.default_syntax" : "d",
+  "workspace.art_style" : 1,
+  "workspace.color" : 12,
+  "workspace.name" : "wren-d"
+}
